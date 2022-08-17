@@ -1,0 +1,49 @@
+.lang {
+    display: flex;
+    overflow: hidden;
+    &_wrp {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid rgba(270, 270, 270, 0.12);
+        @include flexCenter;
+        cursor: pointer;
+        &:not(:first-of-type) {
+            margin: 0 0 0 20px;
+        }
+    }
+    &_img {
+        height: 21px;
+        width: 15px;
+    }
+    &_text {
+        color: $main-color;
+    }
+    .choise_wrp {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .first_choice {
+        animation: lang-show 0.5s forwards;
+        pointer-events: all;
+    }
+    .second_choice {
+        animation: lang-show 0.5s 0.5s forwards;
+        pointer-events: all;
+    }
+    .hide {
+        animation: lang-hide 0.5s forwards;
+    }
+
+    // .first_choice,
+    // .second_choice {
+    //     opacity: 0;
+    // }
+
+    // &_btn:hover ~ .first_choice {
+    //     animation: lang-show 0.5s forwards;
+    // }
+    // &_btn:hover ~ .second_choice {
+    //     animation: lang-show 0.5s 0.5s forwards;
+    // }
+}
