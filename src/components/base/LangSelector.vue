@@ -17,6 +17,7 @@
             class="lang_wrp choise_wrp"
             :class="{
                 second_choice: showChoice === 2,
+                hide: showChoice === 3,
             }"
             @click="showChoice = 3"
         >
